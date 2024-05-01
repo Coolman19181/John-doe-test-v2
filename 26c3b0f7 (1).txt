@@ -9,34 +9,6 @@
 player = game:GetService("Players").LocalPlayer
 chara = player.Character
 
-ch = chara:GetChildren()
-for i = 1, #ch do
-if ch[i].Name == "Torso" then
-ch[i].roblox.Transparency = 1
-elseif ch[i].Name == "Head" then
-ch[i].face.Transparency = 1
-ch[i].Transparency = 1
-elseif ch[i].ClassName == "Accessory" or ch[i].ClassName == "Shirt" or ch[i].ClassName == "Pants" or ch[i].ClassName == "ShirtGraphic" then
-ch[i]:Destroy()
-end
-end
-
-chara["Left Arm"].BrickColor = BrickColor.new("Cool yellow")
-chara["Right Arm"].BrickColor = BrickColor.new("Cool yellow")
-chara["Left Leg"].BrickColor = BrickColor.new("Medium blue")
-chara["Right Leg"].BrickColor = BrickColor.new("Medium blue")
-chara.Torso.BrickColor = BrickColor.new("Bright yellow")
-
---Outfit--
-New = function(Object, Parent, Name, Data)
-	local Object = Instance.new(Object)
-	for Index, Value in pairs(Data or {}) do
-		Object[Index] = Value
-	end
-	Object.Parent = Parent
-	Object.Name = Name
-	return Object
-end
 
 function ScatterEff(part)
 local eff1 = Instance.new("ParticleEmitter",part)
